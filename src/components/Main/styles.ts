@@ -73,3 +73,10 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const CreditText = styled.p`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.9rem;
+`;

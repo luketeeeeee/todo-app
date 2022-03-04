@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-import { Container } from "./styles";
+import { Container, CreditText } from "./styles";
 import 'react-toastify/dist/ReactToastify.css';
 
 import addImg from "../../assets/add.svg";
@@ -50,42 +50,56 @@ export function Main() {
   }
 
   return (
-    <Container>
-      <form onSubmit={handleCreateNewTask} autoComplete="off">
-        <h2>minhas tasks</h2>
+    <>
+      <Container>
+        <form onSubmit={handleCreateNewTask} autoComplete="off">
+          <h2>minhas tasks</h2>
 
-        <div>
-          <input
-            type="text"
-            id="task-title-input"
-            placeholder="nome da task"
-            value={title}
-            onChange={event => setTitle(event.target.value)}
-          />
-          <button type="submit" >
-            <img src={addImg} alt="Adicionar task" />
-          </button>
-        </div>
-      </form>
-
-      <main>
-        {tasks.map(task => (
-          <div key={task.id}>
-            <div className="new-task">
-              <div className="info-group">
-                <input type="checkbox" className="task-checkbox" onChange={() => setIsTaskCompleted(!task.isComplete)} />
-                <p>{task.name}</p>
-              </div>
-              <button onClick={() => handleRemoveTask(task.id)}>
-                <img src={deleteImg} alt="Deletar task" />
-              </button>
-            </div>
-            <hr />
+          <div>
+            <input
+              type="text"
+              id="task-title-input"
+              placeholder="nome da task"
+              value={title}
+              onChange={event => setTitle(event.target.value)}
+            />
+            <button type="submit" >
+              <img src={addImg} alt="Adicionar task" />
+            </button>
           </div>
-        ))}
-      </main>
+        </form>
 
-      <ToastContainer />
-    </Container>
+        <main>
+          {tasks.map(task => (
+            <div key={task.id}>
+              <div className="new-task">
+                <div className="info-group">
+                  <input
+                    type="checkbox"
+                    className="task-checkbox"
+                    onChange={() => {
+                      if (task.isComplete === false) {
+                        setIsTaskCompleted(task.isComplete = true);
+                      } else {
+                        setIsTaskCompleted(task.isComplete = false);
+                      }
+                    }}
+                  />
+                  <p>{task.name}</p>
+                </div>
+                <button onClick={() => handleRemoveTask(task.id)}>
+                  <img src={deleteImg} alt="Deletar task" />
+                </button>
+              </div>
+              <hr />
+            </div>
+          ))}
+        </main>
+        <ToastContainer />
+      </Container>
+      <CreditText>
+        made by lukete
+      </CreditText>
+    </>
   );
 }
