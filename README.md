@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+## To Do app ✅
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um app de uma lista de to-do, bem simples. Ele tem algumas funcionalidades, como: adicionar uma nova task (ele não permite a criação de uma task sem nome), excluir uma task e marcar a task como concluída ou não.
 
-## Available Scripts
+### ⚡ Tecnologias usadas:
+- React, como framework principal
+- Styled Components, para estilização
+- TypeScript, a linguagem principal
+- Toastify, uma lib para emitir toasts de alerta
+- yarn, o gerenciador de pacotes escolhido
 
-In the project directory, you can run:
+### 💡 O que aprendi:
+Fiz esse app para pôr em prática os fundamentos do React, que foi o framework escolhido, sendo assim desenvolvi e aprimorei minhas habilidades na utilização do React. Além disso, aprendi mais sobre a utilização do TypeScript e sobre a sua maior vantagem, a tipagem. Utilizei o Toastify pela primeira vez para testar suas funcionalidades (e aprender como se usa haha), ele foi usado para emitir os alertas de quando a task está sendo criada sem um nome.
 
-### `yarn start`
+### 🚩Features:
+- A primeira featura adicionada foi a interface em si, toda sua estrutura e estilização
+- A próxima a ser adicionada ao projeto foi a de criação de uma nova task, com a condição de que a tarefa não pode ser criada sem um nome
+- As últimas a serem adicionadas, foram as funcionalidades que permitem excluir e também marcar ou desmarcar uma tarefa da lista
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📷 Imagem:
+![Captura de tela 2022-02-28 003050](https://user-images.githubusercontent.com/72895317/155919405-4b402baa-f81c-4df7-b333-179502ed0ac6.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### ⚙️ Funcionamento:
+![2022-02-27 23-17-13](https://user-images.githubusercontent.com/72895317/155919364-69d2e693-17d8-41f0-8600-52c3d7c601ae.gif)
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Obs.:
+- utilizei como base para o projeto, o design e as funcionalidades especificadas no desafio 01 do curso de React do Ignite da Rocketseat.
